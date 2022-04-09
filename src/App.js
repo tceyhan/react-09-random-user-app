@@ -98,7 +98,7 @@ function App() {
     }
   };
 
-  // github yönlendirme
+  // linkledin yönlendirme
   const handlePage = () => {
     window.open("https://www.linkedin.com/in/tarikceyhan/" , "_blank");
   };
