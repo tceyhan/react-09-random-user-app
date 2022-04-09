@@ -13,8 +13,10 @@ Project aims to create a Random User App 2.
 
 ## Project Skeleton
 
+
 ```
-007 - Random User App 2 (folder)
+# https://react-09-random-user-app.netlify.app/
+09 - Random User App 2 (folder)
 |
 |----readme.md         # Given to the students (Definition of the project)
 SOLUTION
