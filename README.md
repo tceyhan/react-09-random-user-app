@@ -12,10 +12,10 @@ Project aims to create a Random User App 2.
 - We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
 
 ## Project Skeleton
-
+https://react-09-random-user-app.netlify.app/
 
 ```
-# https://react-09-random-user-app.netlify.app/
+
 09 - Random User App 2 (folder)
 |
 |----readme.md         # Given to the students (Definition of the project)
