@@ -11,6 +11,19 @@ import Mailsvg from "./assets/mail.svg";
 import Map from "./assets/map.svg";
 import Phone from "./assets/phone.svg";
 import Padlock from "./assets/padlock.svg";
+import cw from "./assets/cw.svg";
+import design from "./assets/design.svg";
+import { ThemeProvider } from "@emotion/react";
+
+import { createTheme } from '@mui/material/styles';
+const theme = createTheme({ 
+  palette: {      
+    neutral: {
+      main: 'brown',
+      contrastText: '#fff',
+    },
+  },
+});
 
 function App() {
   const [user, setUser] = useState({
@@ -83,13 +96,20 @@ function App() {
         { name: user.name, email: user.email, phone: user.phone, age: user.age },
       ]);
     }
-
   };
 
-  console.log(table);
+  // github yönlendirme
+  const handlePage = () => {
+    window.open("https://www.linkedin.com/in/tarikceyhan/" , "_blank");
+  };
+
+  // console.log(table);
 
   return (
     <div className="App">
+      <div className="first">
+        <img className="cw" src={cw} alt="" />
+      </div>
       <div className="random">
         <div className="random-empty"></div>
         <div className="random-img">
@@ -105,34 +125,40 @@ function App() {
         </div>
         <div className="random-icon">
           <Avatar
+            className="avatar"
             alt="name"
             src={user.gender === "male" ? Man : Woman}
             onMouseOver={handleMouseOver}
           />
-          <Avatar alt="email" src={Mailsvg} onMouseOver={handleMouseOver} />
+          <Avatar className="avatar" alt="email" src={Mailsvg} onMouseOver={handleMouseOver} />
           <Avatar
+            className="avatar"
             alt="age"
             src={user.gender === "male" ? GrowingMan : GrowingWoman}
             onMouseOver={handleMouseOver}
           />
-          <Avatar alt="city" src={Map} onMouseOver={handleMouseOver} />
-          <Avatar alt="phone" src={Phone} onMouseOver={handleMouseOver} />
-          <Avatar alt="password" src={Padlock} onMouseOver={handleMouseOver} />
+          <Avatar className="avatar" alt="city" src={Map} onMouseOver={handleMouseOver} />
+          <Avatar className="avatar" alt="phone" src={Phone} onMouseOver={handleMouseOver} />
+          <Avatar className="avatar" alt="password" src={Padlock} onMouseOver={handleMouseOver} />
         </div>
         <div className="random-button">
-          <Button variant="contained" onClick={getData}>
+        <ThemeProvider theme={theme}>
+          <Button className="btn"  color="neutral" variant="contained" onClick={getData}>
             {load ? "Random User" : "Loading"}
           </Button>
-          <Button variant="contained" onClick={handleAddUser}>
+          </ThemeProvider>
+          <ThemeProvider theme={theme}>
+          <Button className="btn" color="neutral" variant="contained" onClick={handleAddUser}>
             Add User
           </Button>
+          </ThemeProvider>
         </div>
         {isOpen && (
           <div className="random-table">
             <table className="random-table-div">
               <thead>
                 <th>Firstname</th>
-                <th>Email</th>
+                <th style={{width:"20px"}}>Email</th>
                 <th>Phone</th>
                 <th>Age</th>
               </thead>
@@ -152,6 +178,17 @@ function App() {
           </div>
         )}
       </div>
+      <div className="second" onClick={handlePage}>
+        <h1 className="h1name">tceyhan</h1>
+        <img className="design-img" src={design} alt="" />
+        <h1 className="h1design">design</h1>
+      </div>
+        
+        
+       
+    
+      
+      
     </div>
   );
 }

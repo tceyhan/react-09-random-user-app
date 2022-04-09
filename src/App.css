@@ -1,93 +1,130 @@
 .App {
-  text-align: center;
-  padding-top: 5rem;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column;  
+  text-align: center; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* header */
+
+.first{
+  display: flex; 
+  background-color: orange;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;   
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* clarusway logo */
+
+.cw{  
+  height: 60px;
+  width: 60px;   
 }
+
+/* card */
 
 .random {
-  background-color: aqua;
+  background-color: white;
   width: 45vw;
-  min-width: 400px;
-  /* min-height: 400px;
-  height: 65vh; */
+  min-width: 450px;
   margin: auto;
-
+  margin-top: -9rem;
+  /* border: #da0404 solid 1px; */
+  box-shadow: #de9191 1px 5px 1px;
+  border-radius: 15px;
+  
 }
-
 .random-empty {
   height: 10vh;
   min-height: 75px;
-  background-color: blue;
+  background-color: rgb(233, 233, 241);
+  border-radius: 10px;
 }
 .random-img {
   display: flex;
   justify-content: center;
-  margin-top: -3rem;
+  margin-top: -4rem;
 }
 .random-icon {
   display: flex;
   justify-content: space-evenly;
 }
-
+.avatar{
+  width: 10vw;
+  height: 10vw;
+  box-shadow: 0px 0px 10px #000000;  
+}
 .random-button {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
+  /* background-color: brown; */
 }
+
+/* table */
+
 .random-table {
   display: flex;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: center;  
 }
 
 .random-table-div {
-  width: 80%;
-  padding: 1rem;
+  width: 90%;
+  padding: 0.5rem;
   word-wrap: break-word;
   /* border: 1px solid black; */
 }
-thead *{
-  /* border: 1px solid black;  */
-  background-color: rgb(255, 200, 98);
-  gap: 1rem;
+thead{
+  background-color: rgb(255, 200, 98);  
   padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.8rem;  
+  height: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-th {
+th{
   margin: 2rem;
+  height: 2rem;
+}
+
+/* footer */
+
+.second{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 600px; */
+  min-width: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top:20px; 
+  border: 1px solid brown;
+  border-radius: 10px;
+}
+.second:hover {
+  background-color: rgb(14, 106, 186);
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px #000000;
+  
+}
+.design-img{
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.h1name{
+  font-size: 30px;
+  color: rgb(25, 1, 1);
+}
+.h1design{
+  color :  brown;
 }
